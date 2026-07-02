@@ -205,7 +205,7 @@ const heroTitle = document.querySelector(".hero h1");
 
 if (heroTitle) {
 
-    const text = "READY TO RACE";
+    const text = "READY TO E";
     let index = 0;
 
     heroTitle.innerHTML = "";
