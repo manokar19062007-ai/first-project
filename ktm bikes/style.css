@@ -1,0 +1,516 @@
+/* ==========================
+   KTM BIKE STORE - STYLE.CSS
+   Part 1
+========================== */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    scroll-behavior:smooth;
+    font-family:'Poppins',sans-serif;
+}
+
+:root{
+    --orange:#ff6600;
+    --black:#111;
+    --white:#fff;
+    --gray:#f5f5f5;
+    --shadow:0 10px 25px rgba(0,0,0,.2);
+}
+
+body{
+    background:var(--white);
+    color:var(--black);
+    overflow-x:hidden;
+}
+
+/* Loader */
+
+#loader{
+    position:fixed;
+    inset:0;
+    background:#111;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    z-index:9999;
+}
+
+#loader h1{
+    color:var(--orange);
+    font-size:60px;
+    letter-spacing:5px;
+}
+
+/* Scroll Progress */
+
+#progress-bar{
+    position:fixed;
+    top:0;
+    left:0;
+    width:0%;
+    height:5px;
+    background:var(--orange);
+    z-index:999;
+}
+
+/* Navbar */
+
+header{
+    position:fixed;
+    top:0;
+    width:100%;
+    z-index:1000;
+}
+
+.navbar{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:18px 8%;
+    background:rgba(0,0,0,.9);
+    backdrop-filter:blur(10px);
+}
+
+.logo{
+    color:var(--orange);
+    font-size:28px;
+    font-weight:bold;
+}
+
+.nav-links{
+    display:flex;
+    list-style:none;
+    gap:35px;
+}
+
+.nav-links a{
+    color:white;
+    text-decoration:none;
+    transition:.3s;
+    font-weight:500;
+}
+
+.nav-links a:hover{
+    color:var(--orange);
+}
+
+#menu{
+    display:none;
+    color:white;
+    font-size:28px;
+    cursor:pointer;
+}
+
+/* Hero */
+
+.hero{
+    height:100vh;
+    background:url("https://images.unsplash.com/photo-1503376780353-7e6692767b70?w=1600") center/cover no-repeat;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+
+.overlay{
+    width:100%;
+    height:100%;
+    background:rgba(0,0,0,.65);
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+    color:white;
+    padding:20px;
+}
+
+.overlay h1{
+    font-size:70px;
+    color:var(--orange);
+}
+
+.overlay p{
+    margin:20px 0;
+    max-width:700px;
+    font-size:20px;
+}
+
+.btn{
+    display:inline-block;
+    padding:14px 35px;
+    background:var(--orange);
+    color:white;
+    text-decoration:none;
+    border-radius:30px;
+    transition:.4s;
+}
+
+.btn:hover{
+    background:white;
+    color:black;
+    transform:translateY(-5px);
+}
+
+/* Search */
+
+.search-box{
+    padding:40px 10%;
+    text-align:center;
+}
+
+#search{
+    width:80%;
+    max-width:500px;
+    padding:15px;
+    border-radius:30px;
+    border:2px solid var(--orange);
+    outline:none;
+    font-size:17px;
+}
+
+/* Section Title */
+
+.title{
+    text-align:center;
+    font-size:40px;
+    margin-bottom:40px;
+    color:var(--orange);
+}
+
+/* Bikes */
+
+#bikes{
+    padding:80px 10%;
+}
+
+.bike-container{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+    gap:30px;
+}
+
+.bike-card{
+    background:white;
+    border-radius:15px;
+    overflow:hidden;
+    box-shadow:var(--shadow);
+    transition:.4s;
+}
+
+.bike-card:hover{
+    transform:translateY(-10px);
+}
+
+.bike-card img{
+    width:100%;
+    height:220px;
+    object-fit:cover;
+}
+
+.bike-card h3{
+    padding:15px;
+    color:var(--orange);
+}
+
+.bike-card p,
+.bike-card h4{
+    padding:0 15px 10px;
+}
+
+.bike-card button{
+    margin:15px;
+    padding:12px 20px;
+    background:var(--orange);
+    color:white;
+    border:none;
+    border-radius:25px;
+    cursor:pointer;
+    transition:.3s;
+}
+
+.bike-card button:hover{
+    background:black;
+}
+/* ==========================
+   FEATURES
+========================== */
+
+#features{
+    padding:80px 10%;
+    background:#f8f8f8;
+}
+
+.feature-box{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+    gap:25px;
+}
+
+.feature{
+    background:#fff;
+    text-align:center;
+    padding:35px 20px;
+    border-radius:15px;
+    box-shadow:var(--shadow);
+    transition:.4s;
+}
+
+.feature:hover{
+    background:var(--orange);
+    color:#fff;
+    transform:translateY(-10px);
+}
+
+.feature i{
+    font-size:45px;
+    margin-bottom:20px;
+    color:var(--orange);
+}
+
+.feature:hover i{
+    color:#fff;
+}
+
+.feature h3{
+    margin-bottom:10px;
+}
+
+/* ==========================
+   ABOUT
+========================== */
+
+#about{
+    padding:80px 10%;
+    background:#fff;
+}
+
+.about-text{
+    max-width:900px;
+    margin:auto;
+    text-align:center;
+    line-height:1.8;
+    font-size:18px;
+}
+
+/* ==========================
+   CONTACT
+========================== */
+
+#contact{
+    padding:80px 10%;
+    background:#f5f5f5;
+}
+
+#contactForm{
+    max-width:650px;
+    margin:auto;
+    display:flex;
+    flex-direction:column;
+    gap:18px;
+}
+
+#contactForm input,
+#contactForm textarea{
+    padding:15px;
+    border:2px solid #ddd;
+    border-radius:10px;
+    font-size:16px;
+    outline:none;
+}
+
+#contactForm textarea{
+    height:160px;
+    resize:none;
+}
+
+#contactForm input:focus,
+#contactForm textarea:focus{
+    border-color:var(--orange);
+}
+
+#contactForm button{
+    background:var(--orange);
+    color:#fff;
+    border:none;
+    padding:15px;
+    border-radius:30px;
+    cursor:pointer;
+    font-size:18px;
+    transition:.3s;
+}
+
+#contactForm button:hover{
+    background:#111;
+}
+
+/* ==========================
+   FOOTER
+========================== */
+
+footer{
+    background:#111;
+    color:#fff;
+    text-align:center;
+    padding:35px 20px;
+}
+
+footer h3{
+    color:var(--orange);
+    margin-bottom:10px;
+}
+
+.social{
+    margin-top:20px;
+}
+
+.social i{
+    font-size:24px;
+    margin:0 10px;
+    cursor:pointer;
+    transition:.3s;
+}
+
+.social i:hover{
+    color:var(--orange);
+    transform:scale(1.2);
+}
+
+/* ==========================
+   TOP BUTTON
+========================== */
+
+#topBtn{
+    position:fixed;
+    bottom:30px;
+    right:30px;
+    width:50px;
+    height:50px;
+    border:none;
+    border-radius:50%;
+    background:var(--orange);
+    color:#fff;
+    cursor:pointer;
+    display:none;
+    box-shadow:var(--shadow);
+    transition:.3s;
+}
+
+#topBtn:hover{
+    background:#111;
+}
+
+/* ==========================
+   ANIMATIONS
+========================== */
+
+@keyframes fadeUp{
+    from{
+        opacity:0;
+        transform:translateY(50px);
+    }
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+}
+
+.hero h1,
+.hero p,
+.hero .btn{
+    animation:fadeUp 1s ease;
+}
+
+/* ==========================
+   RESPONSIVE
+========================== */
+
+@media(max-width:992px){
+
+.nav-links{
+    gap:18px;
+}
+
+.overlay h1{
+    font-size:50px;
+}
+
+}
+
+@media(max-width:768px){
+
+#menu{
+    display:block;
+}
+
+.nav-links{
+    position:absolute;
+    top:75px;
+    left:-100%;
+    width:100%;
+    background:#111;
+    flex-direction:column;
+    text-align:center;
+    padding:20px 0;
+    transition:.4s;
+}
+
+.nav-links.active{
+    left:0;
+}
+
+.overlay h1{
+    font-size:40px;
+}
+
+.overlay p{
+    font-size:16px;
+}
+
+.title{
+    font-size:32px;
+}
+
+#search{
+    width:100%;
+}
+
+.bike-card img{
+    height:200px;
+}
+
+}
+
+@media(max-width:480px){
+
+.logo{
+    font-size:22px;
+}
+
+.overlay h1{
+    font-size:32px;
+}
+
+.overlay p{
+    font-size:15px;
+}
+
+.btn{
+    padding:12px 25px;
+}
+
+.title{
+    font-size:28px;
+}
+
+#contactForm input,
+#contactForm textarea{
+    font-size:15px;
+}
+
+footer{
+    font-size:14px;
+}
+
+}
